@@ -1,0 +1,259 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 1rem 6rem;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 17px;
+  margin: 0;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-container {
+  position: relative;
+  width: fit-content;
+}
+
+.form__search-input {
+  width: 376px;
+  height: 44px;
+  padding: 10px;
+  padding-right: 40px;
+  border: 1px solid #b8b6bf;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px 0px #00000014;
+  background: transparent;
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+input::placeholder {
+  color: black;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 28px;
+  height: 28px;
+}
+
+.main__mode-btn {
+  display: flex;
+  justify-content: right;
+  margin-top: 40px;
+}
+
+.darkmode-toggle-label {
+  width: 70px;
+  height: 32px;
+  position: relative;
+  display: block;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  box-shadow: -3px 3px 3px 0px #c7c7c740 inset;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.darkmode-toggle-label::after {
+  content: "";
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: #ff3d00 url("./img/sun-fox.svg") no-repeat;
+  background-position: 3px 4px;
+  box-shadow: 0px 3px 4px 0px #ff3d0099;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.darkmode-toggle {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.darkmode-toggle:checked + .darkmode-toggle-label {
+  background: #242424;
+  border: 1px solid #808080;
+  box-shadow: 3px 1px 2px 0px #c7c7c740 inset;
+}
+
+.darkmode-toggle:checked + .darkmode-toggle-label::after {
+  left: 65px;
+  background: #2400ff url("./img/moon-fox.svg") no-repeat;
+  background-position: 3px 4px;
+  box-shadow: 0px 3px 4px 0px #2400ff99;
+  transform: translateX(-100%);
+}
+
+.darkmode-toggle-label:active:after {
+  width: 30px;
+}
+
+.darkmode {
+  background: #242424;
+  color: white;
+}
+
+.darkmode .darkmode-toggle-label {
+  background: #ff3d00;
+}
+
+.darkmode input {
+  border-color: #9a99a2;
+  color: white;
+}
+
+.darkmode input::placeholder {
+  color: #9a99a2;
+}
+
+.darkmode select {
+  background: #242424;
+  color: white;
+}
+
+.main-form__mobile-size {
+  display: none;
+}
+
+.custom-select {
+  width: 152px;
+  margin-top: 30px;
+}
+
+.regions {
+  width: 100%;
+  height: 44px;
+  padding: 10px;
+  padding-right: 40px;
+  border: 1px solid #b8b6bf;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  background: transparent;
+  color: black;
+}
+
+.countries-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.counties__card {
+  width: 287px;
+  height: 340px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 29px 0px #00000040;
+  margin-top: 3rem;
+  margin-right: 2.5rem;
+}
+
+.darkmode .counties__card {
+  border: 1px solid #ababab;
+}
+
+.counties__card-img {
+  width: 287px;
+  height: 179px;
+  border-radius: 10px;
+}
+
+.cards-title {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.counties__card-info {
+  padding: 10px 20px;
+}
+
+@media screen and (max-width: 376px) {
+  body {
+    padding: 1rem 7px;
+  }
+
+  h1 {
+    font-size: 29px;
+  }
+
+  .main-form__desktop-size {
+    display: none;
+  }
+
+  .main__mode-btn {
+    margin-top: 20px;
+  }
+
+  .main-form__mobile-size {
+    display: block;
+  }
+
+  .form__search-input {
+    width: 346px;
+    height: 42px;
+  }
+
+  .regions {
+    width: 346px;
+    height: 42px;
+    margin-top: -15px;
+  }
+
+  .counties__card {
+    width: 167px;
+    height: 210px;
+    margin-top: 15px;
+    margin-right: 5px;
+  }
+
+  .counties__card-img {
+    width: 167px;
+    height: 104px;
+    border-radius: 10px;
+  }
+
+  .cards-title {
+    font-size: 10px;
+  }
+
+  p {
+    font-size: 10px;
+  }
+
+  .counties__card-info {
+    padding: 5px 10px;
+  }
+}

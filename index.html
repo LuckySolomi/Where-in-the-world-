@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./scripts.js" defer></script>
+    <title>Counties Page</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <form class="main-form__desktop-size">
+        <h1>Where in the world?</h1>
+        <div class="search-container">
+          <input
+            id="country"
+            class="form__search-input"
+            type="text"
+            placeholder="Search for a country...."
+          />
+          <img src="./img/search.svg" alt="Search icon" class="search-icon" />
+        </div>
+      </form>
+      <div>
+        <div class="main__mode-btn">
+          <input type="checkbox" class="darkmode-toggle" id="darkModeToggle" />
+          <label class="darkmode-toggle-label" for="darkModeToggle"></label>
+        </div>
+        <form class="main-form__mobile-size">
+          <h1>Where in the world?</h1>
+          <div class="search-container">
+            <input
+              id="countryMobile"
+              class="form__search-input"
+              type="text"
+              placeholder="Search for a country...."
+            />
+            <img src="./img/search.svg" alt="Search icon" class="search-icon" />
+          </div>
+        </form>
+        <div class="custom-select">
+          <select class="regions" id="regionSelect">
+            <option value="region">Region</option>
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="americas">America</option>
+          </select>
+        </div>
+      </div>
+    </header>
+    <div id="countriesContainer" class="countries-container"></div>
+  </body>
+</html>
